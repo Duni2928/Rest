@@ -1,0 +1,213 @@
+.date-booking {
+  width: 100%;
+  &__items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &__item {
+    justify-self: center;
+  }
+  &__header {
+    display: none;
+    background-color: $color-white;
+    align-items: center;
+    @media (max-width: $bp3) {
+      display: flex;
+    }
+  }
+  &__lbl {
+    flex: 1 1 auto;
+    font-size: 20px;
+    line-height: 350%;
+    color: $color-black;
+    text-align: center;
+  }
+  &__close {
+    flex: 0 0 50px;
+    font-size: 45px;
+    color: $color-black;
+    transform: rotate(45deg);
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 188%;  
+    text-transform: capitalize;   
+    color: $color-paris; 
+    cursor: pointer;
+  }
+  &__select {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    top: 120%;
+    background-color: $color-white;
+    padding: 20px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 188%;
+    text-transform: capitalize;
+    color: $color-paris;
+    opacity: 0.6;
+    @media (max-width:$bp3) {
+      font-size: 14px;
+    }
+  }
+}
+.modal-booking__body,
+.date-booking__body {
+  display: flex;
+  align-items:  center;
+  margin-bottom: 10px;
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 7px;
+    background: url('../img/booking-arrow.png') center no-repeat;
+    position: relative;
+    top: 3px;
+    margin-left: 4px;
+    transition: transform .2s linear;
+    cursor: pointer
+  }
+}
+.modal-booking {
+  display: none;
+  @media (max-width: $bp3) {
+    display: block;
+  }
+}
+.main-booking {
+  .date-booking__body {
+    &.active {
+      .date-booking__select {
+        display: block
+      }
+      &::after {
+        transform: rotate(-180deg)
+      }
+    }
+    &.active + .date-booking__text {
+      opacity: 0;
+      pointer-events: none
+    }
+  }
+  @media (max-width: $bp3) {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;   
+    background-color: rgba(255, 255, 255, .5);
+    transition: all .5s linear;
+    .date-booking__inner {
+      background-color: $color-white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 380px;
+      border-radius: 20px 20px 0px 0px;
+      padding: 0px 20px 20px;
+      transform: translateY(100%);
+      transition: all .5s linear
+    }
+    .date-booking__body {
+      position: static
+    }
+    .date-booking__select {
+      top: 103px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      transform: translateX(0);
+      height: calc(100% - 103px);
+      overflow: scroll;
+      border-top: 1px solid $color-chardon;
+    }
+    table {
+      width: 100%
+    }
+    .date-booking__text {
+      display: none
+    }
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      transition: all .5s linear;
+      .date-booking__inner {
+        transform: translateY(0);    
+      }
+    }
+  }
+}
+.dycalendar {
+  font-size: 14px;
+  line-height: 188%;  
+  text-transform: capitalize;   
+  color: $color-paris; 
+  td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    @media (max-width:$bp1) {
+      height: 25px
+    }
+  } 
+}
+.dycalendar__btn {
+  cursor: pointer;
+}
+.dycalendar-target-date {
+  color: $color-red;
+  &.selected {
+    color: $color-paris;
+  }
+}
+.dycalendar-header {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $bp3) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+.dycalendar-prev-next-btn {
+  cursor: pointer;
+}
+.dycalendar-span-month-year {
+  pointer-events: none
+}
+.time,.people {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  &__btn { 
+    font-size: 14px;
+    line-height: 120%;  
+    text-transform: capitalize;   
+    color: $color-paris; 
+    padding: 5px 10px;
+    border: 1px solid $color-paris;
+    border-radius: 20px;
+    white-space: nowrap
+  }
+}
+.selected {
+  background-color: $color-red
+}
+.disable {
+  pointer-events: none;
+  opacity: 0.5
+}
+

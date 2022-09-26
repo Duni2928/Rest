@@ -1,0 +1,29 @@
+.form {
+  width: 100%;
+  height: 90px;
+  background-color: $color-white;
+  padding: 0 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  &__input {
+    flex: 1 1 auto;
+    height: 100%;
+    padding: 0 20px 0 51px;
+    font-size: 18px;
+    line-height: 5;
+    color: $color-paris;
+    opacity: 0.6;
+    @media (max-width:$bp4) {
+      max-width: 160px
+    }
+  }
+  &__btn {
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+    background-color: $color-red;
+    color: $color-white;
+  }
+}

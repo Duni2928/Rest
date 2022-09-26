@@ -1,0 +1,29 @@
+.shape-overlays {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 38;
+  overflow: hidden;
+   transform: scale(1.001);
+  &.isOpened {
+    pointer-events: auto
+  }
+}
+.shape-overlays__path {
+  &:nth-child(1) {
+    fill: $color-red;
+  }
+  &:nth-child(2) {
+    fill: $color-seashell;
+  }
+  &:nth-child(3) {
+    fill: $color-red;
+  }
+  &:nth-child(4) {
+    fill: $color-seashell;
+  }
+}

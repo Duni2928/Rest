@@ -1,0 +1,55 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-chardon;
+  z-index: 1000;
+  transition: transform .5s ease;
+  &:after {
+    content: "";
+    display: block;
+    width: 70%;
+    max-width: 360px;
+    padding-top: 83.7%;
+    background-image: url('../img/preloader.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__inner {
+    width: 241px;
+    height: 78px;
+    position: relative;
+  }
+  &__image1 {  
+    fill: $color-red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    display: block;
+    width: 100%;
+    height: 0%;
+    animation: imgLoading 3s linear infinite;
+    will-change: height,opacity;
+  }
+  &__image2 {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  } 
+}

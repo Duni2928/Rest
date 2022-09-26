@@ -1,0 +1,249 @@
+.booking {
+  background-color: $color-chardon;
+  position: relative;
+  z-index: 1;
+  padding: 265px 0;
+  @media (max-width:$bp1) {
+    padding: 200px 0 130px;
+  }
+  @media (max-width:$bp3) {
+    padding: 85px 0 83px;
+  } 
+  &__container {
+    max-width: 1090px;
+    background-color: $color-white;
+    position: relative;
+    @media (max-width:$bp1) {
+      max-width: 745px
+    }
+    @media (max-width:$bp3) {
+      max-width: 360px
+    } 
+  }
+  &__inner {
+    width: 100%;
+    max-width: 544px;
+    margin: 0 auto; 
+    padding: 100px 0 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    @media (max-width:$bp1) {
+      padding: 40px 0 25px
+    } 
+    @media (max-width:$bp2) {
+      max-width: 400px;
+    } 
+    @media (max-width:$bp3) {
+      max-width: 273px;
+      padding: 15px 0 38px
+    } 
+  }
+  &__top {
+    margin-bottom: 62px;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      max-width: 230px;
+      height: 15px;
+      margin: 0 auto 33px;
+      background-color: $color-red; 
+    }
+    @media (max-width:$bp3) {
+      margin-bottom: 42px;
+      &::before {
+        height: 10px;
+        max-width: 150px;
+        margin: 0 auto 24px;
+      }  
+    }
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 67%;
+    .char {
+      &:first-child {
+        text-transform: lowercase
+      }
+    }
+    @media (max-width:$bp3) {
+      font-size: 24px;
+      line-height: 100%
+    } 
+  }
+  &__form {
+    box-shadow: 2px 2px 30px 2px #FFF5EC;
+    padding: 0 14px;
+    margin-bottom: 56px;
+    @media (max-width:$bp1) {
+      padding: 0 9px 0 20px;
+    }
+    @media (max-width:$bp2) {
+      height: 51px;
+      margin-bottom: 65px;
+      padding: 0 6px;
+      margin-left: 20px
+    } 
+    @media (max-width:$bp4) {
+      margin-left: 0;
+    }
+  }
+  &__input {
+    padding: 0 20px 0 26px;
+    font-size: 16px;
+    text-transform: lowercase;
+    @media (max-width:$bp2) {
+      font-size: 14px;
+      padding: 0 10px 0 2px
+    }
+  }
+  &__btn {
+    height: 62px; 
+    padding: 0 39px;
+    @media (max-width:$bp2) {
+      height: 40px;
+      padding: 0 21px;
+      font-size: 24px;
+    }
+    @media (max-width:$bp4) {
+      width: 100px;
+      padding: 0
+    }
+  }
+  &__innerbg1 {
+    display: block;
+    width: 145px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 99%;
+    bottom: 0;
+    background-color: $color-white;
+    @media (max-width: $bp1) {
+      width: 50%
+    } 
+    @media (max-width: 500px) {
+      display: none;
+    } 
+  }
+  &__innerbg2, &__innerbg3 {
+    @media (max-width:$bp3) {
+      &:before {
+        width: 297px;
+        height: 380px;
+        background-image: radial-gradient(#e6e6e6 5px,transparent 0);
+        background-size: 33px 31px;
+      }
+    }
+    @media (max-width:$bp4) {
+      &:before {
+        width: 231px;
+        height: 287px;
+      }
+    }
+  }
+  &__innerbg2 {
+    &:before {
+      top: -84px;
+      right: -66px;
+      @media (max-width:$bp1) {
+        right: -70px
+      }
+      @media (max-width:$bp2) {
+        right: 0px
+      }
+      @media (max-width:$bp3) {
+        top: -70px;
+        right: -73px
+      }
+      @media (max-width:$bp4) {
+        top: -35px;
+        right: 0
+      }
+    }
+  }
+  &__innerbg3 {
+    &:before {
+      bottom: -85px;
+      left: -60px;
+      @media (max-width:$bp1) {
+        left: -240px;
+        bottom: -77px
+      }
+      @media (max-width:$bp3) {
+        left: -97px;
+      }
+      @media (max-width:$bp4) {
+        bottom: -40px;
+        left: 0
+      }
+    }
+  }
+  &__outerbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+    &:before, &:after {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      z-index: 2;
+      width: 50%;
+      pointer-events: none;
+      @media (max-width: 500px) {
+        display: none;
+      }  
+    }
+    &:before {
+      height: 100%;
+      background-image: url('../img/booking-bg1.png');
+      background-position: left bottom;
+      background-size: contain;
+      bottom: 0;
+      left: 0;
+      @media (min-width: $bp1) and (max-width:1650px) {
+        left: -12%
+      } 
+      @media (max-width: 1300px) {
+        left: -12%
+      }   
+      @media (max-width: $bp2) {
+        height: 120%;
+        left: -23%;
+        background-position: right bottom;
+        background-size: cover;
+      } 
+    }
+    &:after {
+      width: 20%;
+      height: 50%;
+      background-image: url('../img/small-salad.png');
+      background-position: right center;
+      top: 50%;
+      right: -80px;
+      transform: translateY(-50%);
+      @media (max-width: $bp1) {
+        transform: translateY(-40%);
+      }
+      @media (max-width: $bp3) {
+        width: 50%;
+        right: -22%;
+        transform: translateY(-22%)
+      }
+    }
+  }
+  &__bottom {
+    margin-left: 20px;
+    @media (max-width:$bp3) {
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.swiper {
+  min-width: 0;
+  overflow: hidden
+}
+.swiper-wrapper {
+  display: flex
+}
+.swiper-slide {
+  flex-grow: 0;
+  flex-shrink: 0
+}

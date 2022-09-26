@@ -1,0 +1,246 @@
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%
+}
+input, textarea,select:focus {
+  outline: none
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+html, body {
+  width: 100%
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  color: $color-gray;
+  background-color: $color-seashell;
+  -webkit-font-smoothing: antialiased;
+  scrollbar-width: thin;
+  scrollbar-color: $color-red $color-seashell;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $color-seashell;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-red;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+.loaded {
+  .preloader {
+    transform: translateX(-100%);
+  }
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1716px;
+  padding: 0 31px;
+  @media (max-width:$bp2) {
+    padding: 0 20px
+  }
+  @media (max-width:$bp4) {
+    padding: 0 10px
+  } 
+}
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    margin-right: 48px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-paris;
+    text-transform: capitalize;
+    &:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: $color-red;
+      opacity: 0;
+      transition: opacity .3s ease
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+.price:before {
+  content: "$";
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+}
+.location {
+  display: inline-flex;
+  align-items: center;
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 25px;
+    background: url('../img/location.png') center no-repeat;
+  }
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  &:before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 25px;
+    height: 140px;
+    background-color: $color-red;
+    margin-right: 33px;
+    animation-duration: 1s;
+    @media (max-width:$bp2) {
+      flex: 0 0  12px;
+      margin-right: 20px;
+      height: 100px
+    } 
+    @media (max-width:$bp4) {
+      height: auto
+    } 
+  }
+  @media (max-width: $bp4) {
+    align-items: stretch
+  } 
+}
+.section-title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 129%;
+  color: $color-paris;
+  .char {
+    &:first-child {
+      text-transform: capitalize
+    }
+  }
+  @media (max-width:$bp2) {
+    font-size: 36px;
+    line-height: 133%;
+  } 
+  @media (max-width: $bp4) {
+    font-size: 28px;
+  }
+}
+.section-text {
+  font-size: 14px;
+  line-height: 171%;
+  text-transform: capitalize;
+  animation-duration: 1s;
+  animation-delay: .2s;
+}
+.lineWrapper {
+  display: block
+}
+.wordWrapper {
+  display: inline-block;
+  margin-right: 0.21em;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.char {
+  display: inline-block;
+  animation-duration: .5s;
+  animation-delay: calc(var(--char-i) * 20ms);
+  animation-timing-function: cubic-bezier(.5,0,.5,1);
+}
+.big-dotts {
+  &:before {
+    content: '';
+    display: block;
+    width: 330px;
+    height: 410px;
+    background-image: radial-gradient(#e6e6e6 5.9px, transparent 0);
+    background-size: 38px 37px;
+    position: absolute;
+    z-index: -1;
+    @media (max-width: $bp4) {
+      width: 254px;
+      height: 336px
+    }
+  }
+}
+.small-dotts {
+  &:before {
+    content: '';
+    display: block;
+    background-image: radial-gradient(#e5e5e5 4px,transparent 0);
+    background-size: 65px 75px;
+    position: absolute;
+    z-index: -1;
+    @media (max-width:$bp1) {
+      background-image: radial-gradient(#e5e5e5 2px,transparent 0);
+      background-size: 47px 48px;
+    }
+  }
+}
+.social {
+  display: flex;
+  align-items: center;
+  &__link {
+    display: block;
+    margin-left: 18px;
+    svg {
+      max-width: 30px;
+      max-height: 25px;
+      fill: $color-gray;
+      line-height: 1;
+    }
+    @media (max-width:$bp1) {
+      margin-left: 16px;
+      svg {
+        max-width: 17px;
+        max-height: 14px;
+      }
+    }
+    &:hover {
+      svg {
+        fill: $color-red
+      }
+    }
+  }
+}
+.swiper {
+  min-width: 0;
+  overflow: hidden
+}
+.swiper-wrapper {
+  display: flex
+}
+.swiper-slide {
+  flex-grow: 0;
+  flex-shrink: 0
+}

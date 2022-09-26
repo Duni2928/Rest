@@ -1,0 +1,13 @@
+@keyframes letters-loading {
+  0%,100%,75% {
+    opacity:0;
+    transform:rotateY(-90deg)
+  }
+  25%,50% {
+    opacity:1;
+    transform:rotateY(0)}
+  }
+ /*  left: 50%;
+    transform: translateX(-50%);
+    /* width: 0; 
+    height: 2px; */

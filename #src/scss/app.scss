@@ -1,0 +1,183 @@
+.app {
+  background-color: $color-chardon;
+  height: 1090px;
+  @media (max-width:$bp1) {
+    height: 1009px;
+    padding-top: 8px
+  }
+  @media (max-width:$bp2) {
+    padding-bottom: 12px;
+    height: auto;
+  }
+  @media (max-width:$bp3) {
+    padding-top: 53px;
+    overflow: hidden
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: $bp3) and (max-width:$bp1) {
+      padding: 0 0 0 31px
+    }
+    @media (max-width:$bp3) {
+      display: block
+    }
+  }
+  &__column {
+    &:last-child {
+      flex: 0 1 51%;
+      display: flex;
+      justify-content: center;
+      @media (max-width:$bp1) {
+        flex: 0 1 45%
+      }
+      @media (max-width:$bp3) {
+        width: 62%;
+        margin: 0 auto
+      }
+    }
+  } 
+  &__images {
+    position: relative;
+    top: 30px;
+    z-index: 2; 
+    &:before {
+      width: 75%;
+      height: 80%;
+      top: 6%;
+      left: -35%;
+      z-index: -2;
+      background-position: left top;
+      @media (max-width:$bp1) {
+        width: 77%;
+        height: 70%;
+        top: -1%;
+        left: -17%;
+      }
+      @media (max-width:$bp3) {
+        width: 200%;
+        height: 200%;
+        left: -50%;
+        background-size: 47px 47px
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      background-image: url('../img/small-salad.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 45%;
+      z-index: -1;
+      position: absolute;
+      left: -45%;
+      top: 40%;
+      transform: rotate(-15deg);
+      @media (max-width:$bp1) {
+        width: 70%;
+        left: -20%;
+        top: 44%
+      }
+      @media (max-width:$bp3) {
+        left: -35%;
+        transform: translateY(-35%) rotate(-15deg)
+      }
+    }
+    @media (max-width:$bp1) {
+      top: 70px
+    }
+    @media (max-width:$bp3) {
+      top: 27px;
+      max-width: 350px;
+    }
+  }  
+  &__phone--inner {
+    display: block;
+    width: 62%;
+    height: 73%;
+    position: absolute;
+    top: 12%;
+    right: 10.4%;
+    z-index: 5;
+    animation: phone 10s .5s linear infinite alternate;
+    background-image: url('../img/phone-inner.jpg');
+    background-size: contain;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px
+  }
+  &__header {
+    margin-bottom: 20px;
+  }
+  &__title {
+    max-width: 444px;
+    .char {
+      &:first-child {
+        text-transform: capitalize
+      }
+    }
+  }
+  &__content {
+    padding: 0 0 68px 60px;
+    @media (max-width:$bp2) {
+      padding: 0 0 0 33px
+    }
+  }
+  &__text {
+    max-width: 449px;
+    margin-bottom: 30px;
+    @media (max-width:$bp3) {
+      max-width: none
+    } 
+  }
+  &__buttons {
+    display: flex;
+    position: relative;
+    z-index: 4;
+    animation-duration: 2s;
+    @media (max-width:$bp4) {
+      flex-direction: column
+    }
+  }
+  &__button {
+    width: 178px;
+    height: 49px;
+    color: $color-white;
+    font-size: 12px;
+    line-height: 200%;
+    text-transform: capitalize;
+    border-radius: 10px;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 30px;
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 171%;
+    }
+    @media (max-width:$bp3) {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @media (max-width:$bp4) {
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+  &__button--android {
+    background: url('../img/android.svg') left 15px center no-repeat, $color-black
+  }
+  &__button--ios {
+    background: url('../img/ios.svg') left 15px center no-repeat , $color-black
+  }
+}
+

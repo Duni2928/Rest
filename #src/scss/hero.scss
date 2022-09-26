@@ -1,0 +1,313 @@
+.hero {
+  position: relative;
+  height: 1210px;
+  &:before {
+    content: "";
+    width: 514px;
+    display: block;
+    height: 100%;
+    background-color: $color-red;
+    position: absolute;
+    right:0;
+    top:0;
+    z-index: -1;
+    @media (max-width: $bp1) {
+      width: 305px
+    }
+    @media (max-width: 800px) {
+      width: 210px
+    }
+    @media (max-width: $bp3) {
+      width: 140px
+    }
+    @media (max-width: $bp4) {
+      width: 125px
+    }
+  }
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 140px;
+    position: relative;
+    @media (max-width: $bp2) {
+      display: block
+    }
+  }
+  &__content {
+    max-width: 63%;
+    padding-bottom: 80px;
+    @media (max-width:$bp1) {
+      padding-bottom: 29px;
+    }
+    @media (max-width: $bp2) {
+      max-width: 100%;
+    }
+    @media (max-width: $bp3) {
+      padding-bottom: 80px
+    }
+    @media (max-width: $bp4) {
+      padding-bottom: 30px
+    }
+  }
+  &__suptitle {
+    font-weight: 900;
+    font-size: 200px;
+    line-height: 70%;
+    color: $color-paris;
+    opacity: 0.05;
+    @media (max-width:$bp1) {
+      font-size: 150px;
+      line-height: 80%;
+    }
+    @media (max-width: $bp3) {
+      font-size: 100px;
+      line-height: 100%;
+    }
+    @media (max-width:$bp4) {
+      font-size: 90px;
+    } 
+
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 125%;
+    color: $color-paris;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    @media (max-width:$bp1) {
+      font-size: 5vw;
+      line-height: 117%;
+      margin-bottom: 40px;
+    }
+    @media (max-width: $bp2) {
+      font-size: 43px;
+      max-width: 70%
+    }
+    @media (max-width: $bp3) {
+      font-size: 36px;
+      line-height: 133%;
+      max-width: 80%;
+      margin-bottom: 22px;
+    }
+    @media (max-width: $bp4) {
+      font-size: 8vw;
+      max-width: 100%;
+    }
+  }
+  &__search {
+    max-width: 670px;
+    .form__input {
+      @media (max-width:$bp1) {
+        padding: 0 20px 0 20px
+      }
+      @media (max-width: $bp4) {
+        font-size: 14px;
+        padding: 0 0 0 2px
+      }
+    }
+    .form__btn {
+      width: 200px;
+      height: 72px;
+      mask: url('../img/btn-mask.png') center no-repeat;
+      mask-position: left top;
+      @media (max-width:$bp1) {
+        width: 146px;
+      }
+      @media (max-width: $bp4) {
+        flex: 0 0 25%;
+        min-width: 90px;
+        font-size: 24px;
+        height: 50px
+      }
+    }
+    @media (max-width:$bp1) {
+      max-width: 462px;
+    }
+    @media (max-width: $bp4) {
+      height: 60px
+    }
+  }
+  &__slider {
+    position: absolute;
+    right: 0;
+    width: 52.5%;
+    margin-bottom: -45px;
+    @media (max-width:$bp1) {
+      width: 45.8%;
+      right: 25px;
+      margin-bottom: 40px;
+    }
+    @media (max-width:$bp2) {
+      position: relative;
+      width: 100%;
+      max-width: 507px;
+      margin: 0 0 0 auto;
+      right: -10px;
+    }
+  }
+  &__location {
+    height: 65px;
+    background-color: $color-red;
+    padding: 0 58px 0 50px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 21%;
+    z-index: 5;
+    &::before {
+      margin-right: 22px;
+    }
+    span {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 3;
+      color: $color-white;
+    }
+    @media (max-width: $bp2) {
+      bottom: 48%
+    }
+    @media (max-width:$bp3) {
+      bottom: 51%;
+      padding: 0 58px 0 30px;
+      &:before {
+        margin-right: 42px;
+      }
+    }
+    @media (max-width:$bp4) {
+      bottom: 4%;
+      height: 41px;
+      padding: 0 18px 0 10px;
+      &:before {
+        margin-right: 12px;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+  @media (max-width: $bp1) {
+    height: 924px;
+  }
+  @media (max-width: $bp2) {
+    height: 1054px;
+    padding-top: 94px;
+  }
+  @media (max-width: $bp4) {
+    height: auto;
+    max-height: 1054px
+  }
+}
+.mainslider {
+  &__slide {
+    display: block;
+    flex-basis: 100%;
+    transition: opacity .5s ease;
+  }
+  &__btns {
+    position: absolute;
+    bottom: 30px;
+    right: 45px;
+    @media (max-width:$bp1) {
+      bottom: -47px;
+      right: 27px;
+    }
+    @media (max-width:$bp2) { 
+      bottom: 0px;
+    }
+    @media (max-width: $bp3) { 
+      right: 20px;
+      bottom: 35px;
+    }
+    @media (max-width: $bp4) { 
+      right: 20px;
+      bottom: -25px;
+    }
+  }
+  &__btn {
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 25px;
+      display: inline-block;
+      background-image: url('../img/hero-arrow.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; 
+      transition: all .3s ease;
+      @media (max-width: $bp3) {
+        width: 34px;
+        height: 16px;
+      }
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      border: 3px solid $color-white;
+      border-radius: 50%;
+      position: absolute;
+      top: -28%;
+      left: -28%;
+      transition: all .3s ease;
+      @media (max-width: $bp3) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &:hover {
+      &:before{
+        transform: translateX(-50%)
+      } 
+      &:after {
+        opacity: 0
+      }  
+    }
+  }
+  &__btn--next {
+    margin-left: 38px;
+    @media (max-width: $bp3) {
+      margin-left: 16px;
+    }
+    &::before {
+      transform: rotate(180deg);
+    }
+    &:after {
+      left: auto;
+      right: -28%;
+    }
+    &:hover {
+      &::before {
+        transform:  translateX(50%)rotate(180deg);
+      }
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 75%;
+    position: absolute;
+    left: 40px;
+    top: 51%;
+    z-index: -2;
+    transform: translateY(-50%);
+    background-image: url('../img/hero-dotts.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width:$bp1) {
+      left: 0
+    }
+    @media (max-width:$bp3) {
+      width: 100%;
+      height: 81%
+    }
+  }
+}
