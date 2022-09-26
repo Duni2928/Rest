@@ -934,7 +934,7 @@ body::-webkit-scrollbar-thumb {
     padding: 10px 55px 10px 15px;
   }
 }
-.header.fixed .header__logo {
+.header.fixed .header__logo svg {
   width: 165px;
   height: 55px;
 }
@@ -2701,6 +2701,8 @@ body::-webkit-scrollbar-thumb {
 .item-service--left {
   -ms-flex-item-align: center;
       align-self: center;
+  position: relative;
+  z-index: 2;
 }
 .item-service--left .item-service__title {
   -webkit-box-align: end;
@@ -2763,6 +2765,8 @@ body::-webkit-scrollbar-thumb {
   -ms-flex-item-align: center;
       align-self: center;
   padding-left: 55px;
+  position: relative;
+  z-index: 2;
 }
 .no-webp .item-service--right .item-service__arrows span::before {
   background: url("../img/service-arrow-s.png") left center no-repeat; }

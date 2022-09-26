@@ -156,6 +156,8 @@
 }
 .item-service--left{
   align-self: center;
+  position: relative;
+  z-index: 2;
   .item-service__title {
     align-items: flex-end;
     @media (max-width:$bp4) {
@@ -203,6 +205,8 @@
 .item-service--right {
   align-self: center;
   padding-left: 55px;
+  position: relative;
+  z-index: 2;
   .item-service__arrows {
     span {
       &::before {
