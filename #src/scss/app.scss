@@ -65,7 +65,7 @@
     &:after {
       content: "";
       display: block;
-      background-image: url('../img/small-salad.png');
+      background-image: url('../images/small-salad.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -103,7 +103,7 @@
     right: 10.4%;
     z-index: 5;
     animation: phone 10s .5s linear infinite alternate;
-    background-image: url('../img/phone-inner.jpg');
+    background-image: url('../images/phone-inner.jpg');
     background-size: contain;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px
@@ -174,10 +174,10 @@
     }
   }
   &__button--android {
-    background: url('../img/android.svg') left 15px center no-repeat, $color-black
+    background: url('../images/android.svg') left 15px center no-repeat, $color-black
   }
   &__button--ios {
-    background: url('../img/ios.svg') left 15px center no-repeat , $color-black
+    background: url('../images/ios.svg') left 15px center no-repeat , $color-black
   }
 }
 

@@ -17,7 +17,8 @@ input, textarea,select:focus {
   margin: 0;
 }
 html, body {
-  width: 100%
+  scroll-behavior: smooth;
+
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -109,7 +110,7 @@ body {
     display: block;
     width: 20px;
     height: 25px;
-    background: url('../img/location.png') center no-repeat;
+    background: url('../images/location.png') center no-repeat;
   }
 }
 .section-header {

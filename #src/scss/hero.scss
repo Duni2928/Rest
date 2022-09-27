@@ -110,7 +110,7 @@
     .form__btn {
       width: 200px;
       height: 72px;
-      mask: url('../img/btn-mask.png') center no-repeat;
+      mask: url('../images/btn-mask.png') center no-repeat;
       mask-position: left top;
       @media (max-width:$bp1) {
         width: 146px;
@@ -235,7 +235,7 @@
       width: 50px;
       height: 25px;
       display: inline-block;
-      background-image: url('../img/hero-arrow.png');
+      background-image: url('../images/hero-arrow.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain; 
@@ -298,7 +298,7 @@
     top: 51%;
     z-index: -2;
     transform: translateY(-50%);
-    background-image: url('../img/hero-dotts.png');
+    background-image: url('../images/hero-dotts.png');
     background-position: left center;
     background-repeat: no-repeat;
     background-size: contain;

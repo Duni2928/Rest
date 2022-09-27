@@ -15,8 +15,6 @@ window.onload = function () {
 const iconMenu = document.querySelector(".icon-menu");
 const navMenu = document.querySelector(".header__nav--menu");
 const navMenuItems = document.querySelectorAll(".header__nav--item");
-const header = document.querySelector(".header");
-let animSpd = 1000
 let firstClick = true
 let liquidMenu = anime({
   targets: '.shape-overlays .shape-overlays__path',
@@ -26,18 +24,12 @@ let liquidMenu = anime({
     {value: "M 100 100 L 0 100 C 0 100 0 86.7723 0 75.5921 C 0 45.7724 0 45.7614 0 28.2204 C 0 12.1194 0 0 0 0 L 100 0 Z"},
   ],
   easing: 'easeOutQuad',
-  duration: animSpd,
+  duration: 1000,
   delay: anime.stagger(50),
   autoplay: false
 });  
 //burger menu
 iconMenu.addEventListener("click", () => {
-  if(header.classList.contains("fixed")) {
-    header.classList.remove("fixed")
-    setTimeout(() => {
-      header.classList.add("fixed")
-    }, animSpd);   
-  }
   iconMenu.classList.toggle("active");
   navMenuItems.forEach(item => {
     item.classList.toggle("isOpened")
@@ -54,11 +46,6 @@ iconMenu.addEventListener("click", () => {
 })  
 //animation on scroll
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 700) {
-    header.classList.add("fixed");
-  } else {
-    header.classList.remove("fixed")
-  }
   let windowTop = window.pageYOffset;
   let animate = document.querySelectorAll(".animate");
   animate.forEach(item => {

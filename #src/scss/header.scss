@@ -133,7 +133,7 @@
         display: block;
         width: 10px;
         height: 5px;
-        background: url('../img/arrowdrop.png') center no-repeat;
+        background: url('../images/arrowdrop.png') center no-repeat;
         margin-left: 10px;
       }
     }
@@ -170,7 +170,7 @@
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: url('../img/user.png') center no-repeat, $color-white;
+    background: url('../images/user.png') center no-repeat, $color-white;
   }
   &__notification {
     width: 15px;

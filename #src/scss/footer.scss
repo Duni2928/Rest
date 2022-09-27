@@ -1,7 +1,7 @@
 .footer {
   padding: 265px 0 67px;
   position: relative;
-  background-image: url('../img/footer__bg.png');
+  background-image: url('../images/footer__bg.png');
   background-position: left bottom;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -117,7 +117,7 @@
   &__btn {
     flex: 0 0 56px;
     height: 56px;
-    background: url('../img/footer-arrow.svg') center no-repeat, $color-red;
+    background: url('../images/footer-arrow.svg') center no-repeat, $color-red;
     border-radius: 50%;
     @media (max-width:$bp2) {
       flex: 0 0 40px;
