@@ -10,20 +10,6 @@
   background-color: $color-chardon;
   z-index: 1000;
   transition: transform .5s ease;
-  &:after {
-    content: "";
-    display: block;
-    width: 70%;
-    max-width: 360px;
-    padding-top: 83.7%;
-    background-image: url('../images/preloader.png');
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
   &__inner {
     width: 241px;
     height: 78px;

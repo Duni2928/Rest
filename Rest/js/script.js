@@ -19,7 +19,6 @@ let firstClick = true
 let liquidMenu = anime({
   targets: '.shape-overlays .shape-overlays__path',
   d: [
-   //{value: "M 100 100 L 100 100 C 100 100 100 86.505 100 71.5831 C 100 42.5652 100 42.5542 100 26.0823 C 100 12.3867 100 0 100 0 L 100 0 Z"},
     {value: "M 100 100 L 28.6653 100 C 28.6653 100 25.8856 92.9194 55.9328 75.5921 C 91.23 57.2649 28.8915 42.8215 28.6653 28.2204 C 28.9391 12.1194 66.0845 0 66.0845 0 L 100 0 Z"},
     {value: "M 100 100 L 0 100 C 0 100 0 86.7723 0 75.5921 C 0 45.7724 0 45.7614 0 28.2204 C 0 12.1194 0 0 0 0 L 100 0 Z"},
   ],
@@ -145,7 +144,7 @@ if (document.querySelector(".date-booking")) {
       } else {
         if (item.querySelector(".date-booking__select").contains(e.target) && !e.target.classList.contains("selected")) {
           return
-        } else {
+        } else if (!mainBooking.classList.contains("active") || mainBooking.classList.contains("active") && item.querySelector(".date-booking__select").contains(e.target)) {
           item.classList.remove("active");
         }
       }
