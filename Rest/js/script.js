@@ -241,6 +241,7 @@ if (document.querySelector(".date-booking")) {
     document.addEventListener("click", function clicked(event) {
       if (!mainBooking.contains(event.target) && !event.target.classList.contains("dycalendar-prev-next-btn")) {
         mainBooking.classList.remove("active")
+        document.body.classList.remove("no-scroll")
         bookingHeader.forEach(el => {
           el.classList.remove("active")
         })
@@ -267,6 +268,7 @@ if (document.querySelector(".date-booking")) {
   function checkSelected(nextItem) {
     if (document.querySelectorAll(".selected").length === 3) {
       mainBooking.classList.remove("active")
+      document.body.classList.remove("no-scroll")
       bookingHeader.forEach(item => {
         item.classList.remove(".active")
       })
