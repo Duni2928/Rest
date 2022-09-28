@@ -10,6 +10,7 @@ function togglePaddingOfBody() {
 window.onload = function () {
   setTimeout(() => {
     document.body.classList.add("loaded")
+    document.body.classList.remove("no-scroll")
   }, 100);
 }
 const iconMenu = document.querySelector(".icon-menu");
@@ -282,6 +283,7 @@ if (document.querySelector(".date-booking")) {
       modalHeader[i].addEventListener("click", () => {
         if (!mainBooking.classList.contains("active")) {
           mainBooking.classList.add("active")
+          document.body.classList.add("no-scroll")
           modalLbl.textContent = "Choose" + " " + modalHeader[i].textContent.toLowerCase()
           bookingHeader.forEach(item => {
             item.classList.remove("active")
@@ -293,6 +295,7 @@ if (document.querySelector(".date-booking")) {
     }
     modalClose.addEventListener("click", () => {
       mainBooking.classList.remove("active")
+      document.body.classList.remove("no-scroll")
       bookingHeader.forEach(item => {
         item.classList.remove("active")
       })
@@ -301,6 +304,7 @@ if (document.querySelector(".date-booking")) {
       document.addEventListener("click", function modalclicked(event) {
         if (event.target == mainBooking) {
           mainBooking.classList.remove("active")
+          document.body.classList.remove("no-scroll")
           bookingHeader.forEach(item => {
             item.classList.remove("active")
           })
