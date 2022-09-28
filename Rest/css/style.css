@@ -695,7 +695,6 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 50;
 }
 .header__container {
   display: -webkit-box;
@@ -715,10 +714,6 @@ body::-webkit-scrollbar-thumb {
   .header__container {
     padding-top: 18px;
   }
-}
-.header__logo {
-  position: relative;
-  z-index: 100;
 }
 .header__logo svg {
   fill: #fe043c;
@@ -751,23 +746,25 @@ body::-webkit-scrollbar-thumb {
   .header__nav--menu {
     visibility: hidden;
     position: fixed;
-    top: 130px;
+    top: 0;
     left: 100%;
     bottom: 0;
     width: 100%;
-    height: calc(100vh - 130px);
+    height: 100vh;
     z-index: 99;
     -webkit-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
     background: transparent;
-    overflow-y: auto;
-  }
-}
-@media (max-width: 1020.98px) {
-  .header__nav--menu {
-    top: 90px;
-    height: calc(100vh - 90px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (max-width: 1450.98px) {
