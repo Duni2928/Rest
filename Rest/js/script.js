@@ -7,6 +7,7 @@ function togglePaddingOfBody() {
     document.body.style.paddingRight = '0px'
   } 
 }
+;
 window.onload = function () {
   setTimeout(() => {
     document.body.classList.add("loaded")
